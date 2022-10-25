@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "267ca9a5-5e4c-42a7-bb37-4f42af74a036",
+		"name": "Spectrocoin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23665773"
+	},
+	"item": [
+		{
+			"name": "Endpoint test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    console.log('Enpoint reachable')\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spectrocoin.com/scapi/ticker/usd/btc",
+					"protocol": "https",
+					"host": [
+						"spectrocoin",
+						"com"
+					],
+					"path": [
+						"scapi",
+						"ticker",
+						"usd",
+						"btc"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
